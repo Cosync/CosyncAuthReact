@@ -1,0 +1,24 @@
+{
+  "name": "cosync-auth-react-native",
+  "version": "1.0.0",
+  "description": "React Native RESTful api for Cosnync Auth Services",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cosync/CosyncAuthReact.git"
+  },
+  "author": "Cosync Inc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cosync/CosyncAuthReact/issues"
+  },
+  "homepage": "https://github.com/Cosync/CosyncAuthReact#readme",
+  "dependencies": {
+    "@realm/react": "^0.5.1",
+    "md5": "^2.3.0",
+    "realm": "^11.3.0"
+  }
+}
