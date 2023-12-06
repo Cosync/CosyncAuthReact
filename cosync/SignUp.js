@@ -85,6 +85,33 @@ module.exports = class SignUp {
             }).catch((error) => reject(error)); 
         });
     }
+
+
+    /**
+     * 
+     * @param {*} token 
+     * @param {*} provider 
+     * @returns 
+     */
+
+    socialLogin(token, provider){
+        return new Promise((resolve, reject) => {  
+            let dataToSend = {
+                token: token,
+                provider: provider 
+            }; 
+
+            this.httpService.post('/api/appuser/socialLogin', dataToSend).then(result => {
+
+                if(result && result.jwt){
+                    if(result['access-token']) global.cosyncConfig.accessToken = result['access-token'];
+                    resolve(result);
+                } 
+                else reject(result);
+
+            }).catch((error) => reject(error)); 
+        });
+    }
  
 
 }
